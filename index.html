@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#4A1519" />
+  <title>Ember &amp; Oak Kitchen | Upscale Casual Dining in Guelph, ON</title>
+  <meta name="description" content="Ember &amp; Oak Kitchen — upscale casual dining in Guelph, Ontario. Seasonal menus, wood-fired mains, and a warm atmosphere perfect for any occasion. Reserve your table today." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Ember &amp; Oak Kitchen | Guelph, ON" />
+  <meta property="og:description" content="Upscale casual dining in Guelph. Seasonal menus, wood-fired cuisine, and Ontario-sourced ingredients. Reserve your table." />
+  <meta property="og:type" content="restaurant" />
+  <meta property="og:url" content="https://grandriverdigital.github.io/ember-oak-kitchen-demo" />
+  <link rel="canonical" href="https://grandriverdigital.github.io/ember-oak-kitchen-demo" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Ember & Oak Kitchen",
+    "description": "Upscale casual Ontario restaurant featuring seasonal menus and wood-fired cuisine.",
+    "url": "https://grandriverdigital.github.io/ember-oak-kitchen-demo",
+    "telephone": "(519) 555-0142",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "142 Wyndham Street N",
+      "addressLocality": "Guelph",
+      "addressRegion": "ON",
+      "postalCode": "N1H 4E9",
+      "addressCountry": "CA"
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "11:00", "closes": "22:00" }
+    ],
+    "servesCuisine": "Contemporary Canadian",
+    "priceRange": "$$–$$$",
+    "hasMap": "https://maps.google.com/?q=Guelph+ON"
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" /></noscript>
+
+  <!-- Image fallback — must be before any img onerror -->
+  <script>
+    var IMG_FALLBACK = 'data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22600%22%3E%3ClinearGradient id=%22g%22 x1=%220%25%22 y1=%220%25%22 x2=%22100%25%22 y2=%22100%25%22%3E%3Cstop offset=%220%25%22 stop-color=%224A1519%22/%3E%3Cstop offset=%22100%25%22 stop-color=%22%238B3A3F%22/%3E%3C/linearGradient%3E%3Crect width=%22800%22 height=%22600%22 fill=%22url(%23g)%22/%3E%3Ccircle cx=%22400%22 cy=%22280%22 r=%2280%22 fill=%22rgba(201,151,58,0.25)%22/%3E%3C/svg%3E';
+    function imgFallback(img) {
+      img.onerror = null;
+      img.src = IMG_FALLBACK;
+      img.style.objectFit = 'cover';
+      var p = img.parentElement;
+      if (p) p.style.background = 'linear-gradient(135deg,#4A1519 0%,#8B3A3F 100%)';
+    }
+  </script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════════
+     TOP BAR
+═══════════════════════════════════ -->
+<div id="topbar">
+  <div class="topbar-left">
+    <div class="topbar-item">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      142 Wyndham St N, Guelph, ON
+    </div>
+    <div class="topbar-item">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      Tue–Sun &nbsp;11am – 10pm
+    </div>
+  </div>
+  <a href="tel:5195550142" class="topbar-phone">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.44 2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.94a16 16 0 0 0 6.16 6.16l.94-.94a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    (519) 555-0142
+  </a>
+</div>
+
+<!-- ═══════════════════════════════════
+     STICKY HEADER
+═══════════════════════════════════ -->
+<header id="hdr">
+  <div class="wrap hdr-inner">
+    <a href="#" class="logo" aria-label="Ember &amp; Oak Kitchen — home">
+      <div class="logo-icon" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+      </div>
+      <div class="logo-text">
+        Ember &amp; Oak
+        <span>Kitchen</span>
+      </div>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#menu">Menu</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#reservations">Reservations</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="hdr-right">
+      <a href="tel:5195550142" class="hdr-phone" aria-label="Call us">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.44 2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.94a16 16 0 0 0 6.16 6.16l.94-.94a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (519) 555-0142
+      </a>
+      <a href="#reservations" class="btn btn-primary btn-sm">Reserve a Table</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Nav -->
+<div id="mobile-nav" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+  <nav>
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#menu" class="mobile-link">Menu</a>
+    <a href="#gallery" class="mobile-link">Gallery</a>
+    <a href="#reservations" class="mobile-link">Reservations</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+  </nav>
+  <div class="mobile-nav-cta">
+    <a href="tel:5195550142" class="btn btn-outline-dk btn-lg" style="justify-content:center">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.44 2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.94a16 16 0 0 0 6.16 6.16l.94-.94a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      (519) 555-0142
+    </a>
+    <a href="#reservations" class="btn btn-primary btn-lg" style="justify-content:center">Reserve a Table</a>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════
+     HERO
+═══════════════════════════════════ -->
+<section id="hero" aria-labelledby="hero-h1">
+  <div class="hero-bg">
+    <img
+      src="https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1800&h=900&dpr=1"
+      alt="Beautifully plated upscale dinner dish with elegant presentation"
+      fetchpriority="high"
+      loading="eager"
+      onerror="imgFallback(this)" />
+  </div>
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="hero-content">
+    <div class="wrap">
+      <div class="hero-inner">
+        <div class="hero-kicker">
+          <span class="dot" aria-hidden="true"></span>
+          Guelph, Ontario &nbsp;·&nbsp; Est. 2018
+        </div>
+        <h1 id="hero-h1">
+          Where <em>Fire Meets</em><br>Flavour.
+        </h1>
+        <p class="hero-sub">
+          Upscale casual dining rooted in Ontario's seasons. Wood-fired mains, locally-sourced ingredients, and a warm room that feels like a celebration every night.
+        </p>
+        <div class="hero-ctas">
+          <a href="#reservations" class="btn btn-primary btn-lg">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Reserve Your Table
+          </a>
+          <a href="#menu" class="btn btn-outline btn-lg">
+            View Our Menu
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+        <div class="hero-badges" role="list" aria-label="Restaurant highlights">
+          <div class="hero-badge" role="listitem">
+            <span class="badge-icon" aria-hidden="true">★</span>
+            OpenTable Top Pick
+          </div>
+          <div class="hero-badge" role="listitem">
+            <span class="badge-icon" aria-hidden="true">🌿</span>
+            Locally Sourced
+          </div>
+          <div class="hero-badge" role="listitem">
+            <span class="badge-icon" aria-hidden="true">🔥</span>
+            Wood-Fire Kitchen
+          </div>
+          <div class="hero-badge" role="listitem">
+            <span class="badge-icon" aria-hidden="true">🍷</span>
+            Ontario Wine List
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     ABOUT
+═══════════════════════════════════ -->
+<section id="about" aria-labelledby="about-title">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-img-stack sr">
+        <div class="about-img-main">
+          <img
+            src="https://images.pexels.com/photos/696218/pexels-photo-696218.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1"
+            alt="Warm, inviting restaurant dining room with candlelit tables"
+            loading="lazy"
+            onerror="imgFallback(this)" />
+        </div>
+        <div class="about-img-accent">
+          <img
+            src="https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&dpr=1"
+            alt="Chef plating a beautifully crafted dish in the kitchen"
+            loading="lazy"
+            onerror="imgFallback(this)" />
+        </div>
+        <div class="about-badge">
+          <div class="big">6+</div>
+          <div class="sm">Years<br>of Craft</div>
+        </div>
+      </div>
+      <div class="about-text">
+        <div class="eyebrow sr">Our Story</div>
+        <h2 class="section-title sr d1" id="about-title">Where Ontario's Best<br>Flavours Come to Life</h2>
+        <p class="sr d2">
+          Ember &amp; Oak Kitchen was born from a simple belief: great dining should feel like coming home. Founded by Chef Marcus Reilly and restaurateur Claire Tanaka in 2018, we set out to create a restaurant where the warmth of the room matches the warmth on the plate.
+        </p>
+        <p class="sr d2">
+          Our wood-fire kitchen is the heart of everything we do. Every protein is touched by fire, every vegetable is sourced from Ontario farms within 200km of our kitchen, and every plate is built to be shared — or savoured alone, slowly, with a glass of Niagara red.
+        </p>
+        <div class="about-values sr d3">
+          <div class="about-value">
+            <div class="about-value-dot" aria-hidden="true"></div>
+            <p><strong>Ontario-first sourcing.</strong> We partner with over 20 local farms and producers. Seasonal means seasonal — the menu changes every eight weeks.</p>
+          </div>
+          <div class="about-value">
+            <div class="about-value-dot" aria-hidden="true"></div>
+            <p><strong>A room worth returning to.</strong> Thoughtful design, warm lighting, and a team that remembers you — because regulars are who we live for.</p>
+          </div>
+          <div class="about-value">
+            <div class="about-value-dot" aria-hidden="true"></div>
+            <p><strong>Events and private dining.</strong> Our private room seats 24. Perfect for celebrations, corporate dinners, and milestone events.</p>
+          </div>
+        </div>
+        <div class="about-sig sr d4">
+          Chef Marcus Reilly &amp; Claire Tanaka
+          <small>Founders, Ember &amp; Oak Kitchen</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     STATS STRIP
+═══════════════════════════════════ -->
+<div id="stats" aria-label="Restaurant highlights">
+  <div class="wrap">
+    <div class="stats-row">
+      <div class="stat-cell">
+        <div class="stat-n" id="sn-yrs">0<span class="accent">+</span></div>
+        <div class="stat-l">Years Open</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-n">4.8<span class="accent">★</span></div>
+        <div class="stat-l">Google Rating</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-n" id="sn-farms">0<span class="accent">+</span></div>
+        <div class="stat-l">Local Farm Partners</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-n">100<span class="accent">%</span></div>
+        <div class="stat-l">Ontario Sourced</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════
+     MENU HIGHLIGHTS
+═══════════════════════════════════ -->
+<section id="menu" aria-labelledby="menu-title">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow sr">Seasonal Menu</div>
+      <h2 class="section-title sr d1" id="menu-title">Menu Highlights</h2>
+      <p class="section-sub sr d2">Our menu changes with Ontario's seasons. Here's a taste of what's on now. Full menu available in-house or upon reservation.</p>
+    </div>
+
+    <div class="menu-tabs sr d1" role="tablist" aria-label="Menu categories">
+      <button class="menu-tab active" role="tab" aria-selected="true" aria-controls="tab-apps" id="btn-apps">Starters</button>
+      <button class="menu-tab" role="tab" aria-selected="false" aria-controls="tab-mains" id="btn-mains">Mains</button>
+      <button class="menu-tab" role="tab" aria-selected="false" aria-controls="tab-desserts" id="btn-desserts">Desserts</button>
+    </div>
+
+    <!-- STARTERS -->
+    <div class="menu-panel active" id="tab-apps" role="tabpanel" aria-labelledby="btn-apps">
+      <div class="menu-grid">
+        <article class="menu-card sr d1">
+          <div class="menu-card__img">
+            <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" alt="Burrata salad with heirloom tomatoes and fresh herbs" loading="lazy" onerror="imgFallback(this)" />
+          </div>
+          <div class="menu-card__body">
+            <div class="menu-card__top">
+              <h3>Burrata &amp; Heirloom</h3>
+              <span class="menu-price">$18</span>
+            </div>
+            <p>Fresh Ontario burrata, heirloom tomatoes, aged balsamic, wild arugula, and toasted pine nuts. Finished with Niagara EVOO.</p>
+            <span class="menu-tag">Vegetarian</span>
+          </div>
+        </article>
+        <article class="menu-card sr d2">
+          <div class="menu-card__img">
+            <img src="https://images.pexels.com/photos/699953/pexels-photo-699953.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" alt="Seared scallops with cauliflower purée" loading="lazy" onerror="imgFallback(this)" />
+          </div>
+          <div class="menu-card__body">
+            <div class="menu-card__top">
+              <h3>Wood-Seared Scallops</h3>
+              <span class="menu-price">$24</span>
+            </div>
+            <p>East Coast scallops, cauliflower purée, crispy capers, pancetta crumble, and lemon beurre blanc. A perennial favourite.</p>
+            <span class="menu-tag">Chef's Pick</span>
+          </div>
+        </article>
+        <article class="menu-card sr d3">
+          <div class="menu-card__img">
+            <img src="https://images.pexels.com/photos/1640772/pexels-photo-1640772.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" alt="Roasted beet and goat cheese salad" loading="lazy" onerror="imgFallback(this)" />
+          </div>
+          <div class="menu-card__body">
+            <div class="menu-card__top">
+              <h3>Roasted Beet &amp; Chèvre</h3>
+              <span class="menu-price">$16</span>
+            </div>
+            <p>Fire-roasted Ontario beets, Upper Canada chèvre, candied walnuts, frisée, and a sherry vinaigrette. Simple, stunning.</p>
+            <span class="menu-tag">Vegetarian</span>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- MAINS -->
+    <div class="menu-panel" id="tab-mains" role="tabpanel" aria-labelledby="btn-mains" hidden>
+      <div class="menu-grid">
+        <article class="menu-card sr d1">
+          <div class="menu-card__img">
+            <img src="https://images.pexels.com/photos/675951/pexels-photo-675951.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" alt="Wood-fired prime ribeye steak with roasted vegetables" loading="lazy" onerror="imgFallback(this)" />
+          </div>
+          <div class="menu-card__body">
+            <div class="menu-card__top">
+              <h3>Ember-Fired Côte de Bœuf</h3>
+              <span class="menu-price">$58</span>
+            </div>
+            <p>14oz Prince Edward County dry-aged côte de bœuf, chimichurri, bone marrow butter, crispy shallots, duck-fat frites.</p>
+            <span class="menu-tag">Signature</span>
+          </div>
+        </article>
+        <article class="menu-card sr d2">
+          <div class="menu-card__img">
+            <img src="https://images.pexels.com/photos/1640773/pexels-photo-1640773.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" alt="Pan-seared salmon with seasonal vegetables" loading="lazy" onerror="imgFallback(this)" />
+          </div>
+          <div class="menu-card__body">
+            <div class="menu-card__top">
+              <h3>Ontario Lake Trout</h3>
+              <span class="menu-price">$42</span>
+            </div>
+            <p>Wild lake trout, brown butter, caperberries, fennel confit, crushed Niagara fingerlings, and watercress. Elegant and light.</p>
+            <span class="menu-tag">Seasonal</span>
+          </div>
+        </article>
+        <article class="menu-card sr d3">
+          <div class="menu-card__img">
+            <img src="https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" alt="Roasted vegetable risotto with parmesan" loading="lazy" onerror="imgFallback(this)" />
+          </div>
+          <div class="menu-card__body">
+            <div class="menu-card__top">
+              <h3>Mushroom &amp; Truffle Risotto</h3>
+              <span class="menu-price">$34</span>
+            </div>
+            <p>Wild Ontario mushrooms, aged Parmigiano-Reggiano, black truffle oil, confit garlic, and crispy sage. Rich and comforting.</p>
+            <span class="menu-tag">Vegetarian</span>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- DESSERTS -->
+    <div class="menu-panel" id="tab-desserts" role="tabpanel" aria-labelledby="btn-desserts" hidden>
+      <div class="menu-grid">
+        <article class="menu-card sr d1">
+          <div class="menu-card__img">
+            <img src="https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" alt="Chocolate fondant with vanilla ice cream" loading="lazy" onerror="imgFallback(this)" />
+          </div>
+          <div class="menu-card__body">
+            <div class="menu-card__top">
+              <h3>Valrhona Chocolate Fondant</h3>
+              <span class="menu-price">$16</span>
+            </div>
+            <p>Warm dark chocolate fondant, hand-churned vanilla bean ice cream, salted caramel, and toasted hazelnuts. Order ahead — worth it.</p>
+            <span class="menu-tag">Must Try</span>
+          </div>
+        </article>
+        <article class="menu-card sr d2">
+          <div class="menu-card__img">
+            <img src="https://images.pexels.com/photos/1126359/pexels-photo-1126359.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" alt="Crème brûlée with fresh berries" loading="lazy" onerror="imgFallback(this)" />
+          </div>
+          <div class="menu-card__body">
+            <div class="menu-card__top">
+              <h3>Ontario Honey Crème Brûlée</h3>
+              <span class="menu-price">$13</span>
+            </div>
+            <p>Classic crème brûlée with local wildflower honey, fresh Wellington County berries, and crisp caramelised sugar. Timeless.</p>
+            <span class="menu-tag">Classic</span>
+          </div>
+        </article>
+        <article class="menu-card sr d3">
+          <div class="menu-card__img">
+            <img src="https://images.pexels.com/photos/1055272/pexels-photo-1055272.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" alt="Apple tarte tatin with whipped cream" loading="lazy" onerror="imgFallback(this)" />
+          </div>
+          <div class="menu-card__body">
+            <div class="menu-card__top">
+              <h3>Applewood Tarte Tatin</h3>
+              <span class="menu-price">$14</span>
+            </div>
+            <p>Warm caramelized Ontario apple tarte tatin, calvados crème fraîche, and smoked salt brittle. Autumn on a plate, year-round.</p>
+            <span class="menu-tag">Seasonal</span>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="menu-cta sr d4">
+      <p>Menu changes seasonally. Dietary accommodations available — please inform your server.</p>
+      <a href="#reservations" class="btn btn-primary">Reserve to Experience the Full Menu</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     GALLERY
+═══════════════════════════════════ -->
+<section id="gallery" aria-labelledby="gallery-title">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow sr">Atmosphere &amp; Food</div>
+      <h2 class="section-title sr d1" id="gallery-title">Inside Ember &amp; Oak</h2>
+      <p class="section-sub cx sr d2">From the dining room to the plate — every detail is considered.</p>
+    </div>
+
+    <div class="gallery-grid" id="gallery-grid" role="list">
+      <div class="gallery-item featured sr"
+           data-src="https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1400&h=900&dpr=1"
+           data-caption="The Ember &amp; Oak dining experience — fine plating and warm ambiance"
+           role="listitem" tabindex="0" aria-label="View: The dining experience">
+        <img src="https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=900&h=600&dpr=1" alt="Beautifully plated upscale dinner with wine" loading="lazy" onerror="imgFallback(this)" />
+        <div class="gallery-overlay"><span class="gallery-label">Signature Plating</span></div>
+        <div class="gallery-zoom" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+
+      <div class="gallery-item sr d1"
+           data-src="https://images.pexels.com/photos/696218/pexels-photo-696218.jpeg?auto=compress&cs=tinysrgb&w=1000&h=700&dpr=1"
+           data-caption="Candlelit dining room — intimate and warm"
+           role="listitem" tabindex="0" aria-label="View: Dining room">
+        <img src="https://images.pexels.com/photos/696218/pexels-photo-696218.jpeg?auto=compress&cs=tinysrgb&w=700&h=467&dpr=1" alt="Candlelit restaurant dining room with warm lighting" loading="lazy" onerror="imgFallback(this)" />
+        <div class="gallery-overlay"><span class="gallery-label">The Dining Room</span></div>
+        <div class="gallery-zoom" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+
+      <div class="gallery-item sr d2"
+           data-src="https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=1000&h=700&dpr=1"
+           data-caption="Chef at work — precision and passion in every dish"
+           role="listitem" tabindex="0" aria-label="View: Kitchen">
+        <img src="https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=700&h=467&dpr=1" alt="Professional chef preparing a dish in modern kitchen" loading="lazy" onerror="imgFallback(this)" />
+        <div class="gallery-overlay"><span class="gallery-label">The Kitchen</span></div>
+        <div class="gallery-zoom" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+
+      <div class="gallery-item wide sr d1"
+           data-src="https://images.pexels.com/photos/941861/pexels-photo-941861.jpeg?auto=compress&cs=tinysrgb&w=1400&h=800&dpr=1"
+           data-caption="Bar and lounge — Ontario craft cocktails and local wines"
+           role="listitem" tabindex="0" aria-label="View: Bar and lounge">
+        <img src="https://images.pexels.com/photos/941861/pexels-photo-941861.jpeg?auto=compress&cs=tinysrgb&w=900&h=500&dpr=1" alt="Elegant restaurant bar with mood lighting and cocktails" loading="lazy" onerror="imgFallback(this)" />
+        <div class="gallery-overlay"><span class="gallery-label">Bar &amp; Lounge</span></div>
+        <div class="gallery-zoom" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+
+      <div class="gallery-item sr d2"
+           data-src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1000&h=700&dpr=1"
+           data-caption="Burrata &amp; Heirloom — a starter worth savouring"
+           role="listitem" tabindex="0" aria-label="View: Burrata starter">
+        <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=700&h=467&dpr=1" alt="Fresh burrata with heirloom tomatoes and herbs" loading="lazy" onerror="imgFallback(this)" />
+        <div class="gallery-overlay"><span class="gallery-label">Burrata Starter</span></div>
+        <div class="gallery-zoom" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+
+      <div class="gallery-item sr d3"
+           data-src="https://images.pexels.com/photos/675951/pexels-photo-675951.jpeg?auto=compress&cs=tinysrgb&w=1000&h=700&dpr=1"
+           data-caption="Ember-fired côte de bœuf — our signature wood-fire main"
+           role="listitem" tabindex="0" aria-label="View: Signature steak">
+        <img src="https://images.pexels.com/photos/675951/pexels-photo-675951.jpeg?auto=compress&cs=tinysrgb&w=700&h=467&dpr=1" alt="Perfectly cooked ribeye steak with chimichurri" loading="lazy" onerror="imgFallback(this)" />
+        <div class="gallery-overlay"><span class="gallery-label">Signature Steak</span></div>
+        <div class="gallery-zoom" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     TESTIMONIALS
+═══════════════════════════════════ -->
+<section id="testimonials" aria-labelledby="test-title">
+  <div class="wrap">
+    <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:1.5rem; margin-bottom:2.5rem;">
+      <div>
+        <div class="eyebrow lt sr">Guest Reviews</div>
+        <h2 class="section-title lt sr d1" id="test-title">What Our Guests Say</h2>
+        <div class="rating-display sr d2">
+          <div class="stars" aria-label="4.8 star rating">★★★★★</div>
+          <div class="rating-text">4.8 · 340+ reviews · Google &amp; OpenTable</div>
+        </div>
+      </div>
+      <div class="carousel-controls sr d1">
+        <button class="carousel-btn" id="prev-btn" aria-label="Previous reviews">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <div class="carousel-dots" id="carousel-dots" role="tablist"></div>
+        <button class="carousel-btn" id="next-btn" aria-label="Next reviews">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="carousel-wrap">
+      <div class="carousel-track-outer">
+        <div class="carousel-track" id="carousel-track">
+
+          <div class="testimonial-card">
+            <div class="t-quote">"</div>
+            <div class="t-stars">★★★★★</div>
+            <p class="t-text">The côte de bœuf was the single best steak I've had in Ontario. The room is stunning, service was warm and knowledgeable without being stiff, and they somehow remembered my wife's allergy from our first visit three months earlier. We're regulars for life.</p>
+            <div class="t-author">
+              <div class="t-avatar" aria-hidden="true">D</div>
+              <div>
+                <div class="t-name">David &amp; Rachel M.</div>
+                <div class="t-loc">Guelph · Google · 2 weeks ago</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="t-quote">"</div>
+            <div class="t-stars">★★★★★</div>
+            <p class="t-text">We booked the private room for our anniversary dinner and it was an absolute dream. The team was attentive without hovering. The mushroom risotto is transcendent. Genuinely the best dining experience Guelph has to offer — and we've tried them all.</p>
+            <div class="t-author">
+              <div class="t-avatar" aria-hidden="true">S</div>
+              <div>
+                <div class="t-name">Sophie &amp; James K.</div>
+                <div class="t-loc">Guelph · OpenTable · 1 month ago</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="t-quote">"</div>
+            <div class="t-stars">★★★★★</div>
+            <p class="t-text">I live in Toronto and Ember &amp; Oak is the reason I make the drive to Guelph. The scallops are consistently perfect. The wine list is genuinely curated — they know what they're doing with Ontario VQA. Flawless experience every time.</p>
+            <div class="t-author">
+              <div class="t-avatar" aria-hidden="true">P</div>
+              <div>
+                <div class="t-name">Patricia L.</div>
+                <div class="t-loc">Toronto · OpenTable · 3 weeks ago</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="t-quote">"</div>
+            <div class="t-stars">★★★★★</div>
+            <p class="t-text">Took our team here for a corporate dinner and everyone raved about it. The private dining experience was seamless — they handled everything. The chocolate fondant had our CFO asking for seconds. Highly recommend for business entertaining.</p>
+            <div class="t-author">
+              <div class="t-avatar" aria-hidden="true">A</div>
+              <div>
+                <div class="t-name">Andrea F.</div>
+                <div class="t-loc">Kitchener · Google · 5 weeks ago</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     RESERVATIONS
+═══════════════════════════════════ -->
+<section id="reservations" aria-labelledby="res-title">
+  <div class="wrap">
+    <div class="res-grid">
+      <div class="res-info">
+        <div class="eyebrow sr">Book Your Visit</div>
+        <h2 class="section-title sr d1" id="res-title">Reserve Your Table</h2>
+        <p class="sr d2">
+          We recommend booking ahead, especially for weekends and holidays. For groups of 8 or more, or private dining inquiries, please call us directly.
+        </p>
+        <div class="contact-items sr d3">
+          <a href="tel:5195550142" class="contact-item" style="text-decoration:none">
+            <div class="contact-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.44 2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.94a16 16 0 0 0 6.16 6.16l.94-.94a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <strong>(519) 555-0142</strong>
+              <span>Tue–Sun, 11am – 9pm</span>
+            </div>
+          </a>
+          <a href="mailto:reservations@emberoakkitchen.ca" class="contact-item" style="text-decoration:none">
+            <div class="contact-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <strong>reservations@emberoakkitchen.ca</strong>
+              <span>We respond within 4 hours</span>
+            </div>
+          </a>
+          <div class="contact-item">
+            <div class="contact-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            </div>
+            <div>
+              <strong>Hours</strong>
+              <span>Tuesday – Sunday &nbsp;|&nbsp; 11am – 10pm</span>
+              <span>Monday Closed</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-card sr d2">
+        <div class="form-badge">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Confirmation within 2 hours
+        </div>
+        <h3>Reservation Request</h3>
+        <p>Fill in the details below and we'll confirm your table promptly.</p>
+        <form id="reservation-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="rfname">First Name *</label>
+              <input id="rfname" type="text" placeholder="Jane" required autocomplete="given-name" />
+            </div>
+            <div class="form-group">
+              <label for="rlname">Last Name *</label>
+              <input id="rlname" type="text" placeholder="Smith" required autocomplete="family-name" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="rphone">Phone *</label>
+              <input id="rphone" type="tel" placeholder="(519) 000-0000" required autocomplete="tel" />
+            </div>
+            <div class="form-group">
+              <label for="rguests">Party Size *</label>
+              <select id="rguests" required>
+                <option value="">Guests…</option>
+                <option>1</option><option>2</option><option>3</option><option>4</option>
+                <option>5</option><option>6</option><option>7</option>
+                <option>8+ (call us)</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="rdate">Preferred Date *</label>
+              <input id="rdate" type="date" required />
+            </div>
+            <div class="form-group">
+              <label for="rtime">Preferred Time *</label>
+              <select id="rtime" required>
+                <option value="">Time…</option>
+                <option>11:30 am</option><option>12:00 pm</option><option>12:30 pm</option>
+                <option>1:00 pm</option><option>5:00 pm</option><option>5:30 pm</option>
+                <option>6:00 pm</option><option>6:30 pm</option><option>7:00 pm</option>
+                <option>7:30 pm</option><option>8:00 pm</option><option>8:30 pm</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="rnotes">Special Requests</label>
+            <textarea id="rnotes" rows="2" placeholder="Allergies, celebrations, seating preferences…"></textarea>
+          </div>
+          <button type="submit" id="res-submit-btn" class="btn btn-primary btn-lg form-submit">
+            Request Reservation
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </button>
+          <p class="form-disc">🔒 Your information is kept private. We'll confirm within 2 hours during business hours.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     CONTACT + LOCATION
+═══════════════════════════════════ -->
+<section id="contact" aria-labelledby="contact-title">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow sr">Find Us</div>
+      <h2 class="section-title sr d1" id="contact-title">Visit Ember &amp; Oak</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-details sr d1">
+        <div class="info-block">
+          <h4>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Address
+          </h4>
+          <p>142 Wyndham Street N<br />Guelph, ON &nbsp;N1H 4E9</p>
+          <a href="https://maps.google.com/?q=142+Wyndham+Street+N+Guelph+ON" target="_blank" rel="noopener noreferrer" class="map-link">Get Directions ↗</a>
+        </div>
+        <div class="info-block">
+          <h4>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Hours
+          </h4>
+          <div class="hours-table">
+            <div class="hours-row"><span>Tuesday – Thursday</span><span>11am – 10pm</span></div>
+            <div class="hours-row"><span>Friday – Saturday</span><span>11am – 11pm</span></div>
+            <div class="hours-row"><span>Sunday</span><span>11am – 9pm</span></div>
+            <div class="hours-row closed"><span>Monday</span><span>Closed</span></div>
+          </div>
+        </div>
+        <div class="info-block">
+          <h4>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.44 2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.94a16 16 0 0 0 6.16 6.16l.94-.94a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Contact
+          </h4>
+          <p><a href="tel:5195550142">(519) 555-0142</a></p>
+          <p><a href="mailto:hello@emberoakkitchen.ca">hello@emberoakkitchen.ca</a></p>
+        </div>
+      </div>
+      <div class="map-placeholder sr d2" aria-label="Restaurant location map">
+        <img src="https://images.pexels.com/photos/1581384/pexels-photo-1581384.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&dpr=1" alt="Exterior of Ember and Oak Kitchen restaurant in downtown Guelph" loading="lazy" onerror="imgFallback(this)" />
+        <div class="map-pin" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          142 Wyndham St N, Guelph
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     FOOTER
+═══════════════════════════════════ -->
+<footer aria-label="Site footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo" aria-label="Ember &amp; Oak Kitchen home">
+          <div class="logo-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+          </div>
+          <div class="logo-text">Ember &amp; Oak <span>Kitchen</span></div>
+        </a>
+        <p>Upscale casual dining in the heart of Guelph, Ontario. Wood-fire kitchen, Ontario sourcing, and a room worth celebrating in.</p>
+        <div class="footer-hours">
+          <div class="footer-hour"><strong>Tue–Thu</strong><span>11am – 10pm</span></div>
+          <div class="footer-hour"><strong>Fri–Sat</strong><span>11am – 11pm</span></div>
+          <div class="footer-hour"><strong>Sunday</strong><span>11am – 9pm</span></div>
+          <div class="footer-hour"><strong>Monday</strong><span>Closed</span></div>
+        </div>
+        <div class="footer-socials" aria-label="Social media links">
+          <a href="#" class="footer-soc" aria-label="Instagram">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+          </a>
+          <a href="#" class="footer-soc" aria-label="Facebook">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" class="footer-soc" aria-label="OpenTable Reviews">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Dining</h5>
+        <ul>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#reservations">Reservations</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Private Dining</a></li>
+          <li><a href="#contact">Gift Cards</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>About</h5>
+        <ul>
+          <li><a href="#about">Our Story</a></li>
+          <li><a href="#about">The Kitchen</a></li>
+          <li><a href="#about">Local Producers</a></li>
+          <li><a href="#contact">Careers</a></li>
+          <li><a href="#contact">Press</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Visit</h5>
+        <ul>
+          <li><a href="tel:5195550142">(519) 555-0142</a></li>
+          <li><a href="mailto:hello@emberoakkitchen.ca">hello@emberoakkitchen.ca</a></li>
+          <li><a href="#">142 Wyndham St N, Guelph</a></li>
+          <li><a href="#">Downtown Guelph, ON</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 Ember &amp; Oak Kitchen. All rights reserved. Guelph, Ontario.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Accessibility</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+    <div class="footer-demo-banner">
+      <p>⚡ Demo site built by <a href="https://grandriverdigital.ca" target="_blank" rel="noopener noreferrer">Grand River Digital</a> — Ontario web design for local businesses. <a href="https://grandriverdigital.ca/contact" target="_blank" rel="noopener noreferrer">Get a site like this →</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="lb-close" id="lb-close" aria-label="Close image viewer">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <button class="lb-nav lb-prev" id="lb-prev" aria-label="Previous image">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+  </button>
+  <img id="lb-img" src="" alt="" onerror="imgFallback(this)" />
+  <button class="lb-nav lb-next" id="lb-next" aria-label="Next image">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+  </button>
+  <div class="lb-caption" id="lb-caption"></div>
+</div>
+
+<!-- MOBILE STICKY BAR -->
+<div id="mob-bar" role="navigation" aria-label="Quick contact">
+  <a href="tel:5195550142" class="btn btn-primary">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.44 2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.94a16 16 0 0 0 6.16 6.16l.94-.94a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    Call Now
+  </a>
+  <a href="#reservations" class="btn btn-outline-dk">Book a Table</a>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
