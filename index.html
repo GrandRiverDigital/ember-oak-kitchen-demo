@@ -10,7 +10,7 @@
   <link rel="canonical" href="https://grandriverdigital.github.io/ember-oak-kitchen-demo" />
 
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Restaurant","name":"Ember & Oak Kitchen","description":"Upscale casual Ontario restaurant featuring seasonal menus and wood-fired cuisine.","url":"https://grandriverdigital.github.io/ember-oak-kitchen-demo","telephone":"(519) 555-0142","address":{"@type":"PostalAddress","streetAddress":"142 Wyndham Street N","addressLocality":"Guelph","addressRegion":"ON","postalCode":"N1H 4E9","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"11:00","closes":"22:00"}],"servesCuisine":"Contemporary Canadian","priceRange":"$$–$$$"}
+  {"@context":"https://schema.org","@type":"Restaurant","name":"Ember & Oak Kitchen","description":"Upscale casual Ontario restaurant featuring seasonal menus and wood-fired cuisine.","url":"https://grandriverdigital.github.io/ember-oak-kitchen-demo","telephone":"(519) 555-0142","address":{"@type":"PostalAddress","streetAddress":"45 Wyndham St N","addressLocality":"Guelph","addressRegion":"ON","postalCode":"N1H 4E9","addressCountry":"CA"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"11:00","closes":"22:00"}],"servesCuisine":"Contemporary Canadian","priceRange":"$$–$$$"}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -32,11 +32,11 @@
   <div class="topbar-left">
     <div class="topbar-item">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-      142 Wyndham St N, Guelph, ON
+      45 Wyndham St N, Guelph, ON
     </div>
     <div class="topbar-item">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-      Tue–Sun &nbsp;11am – 10pm
+      Tue–Thu 11am–9pm · Fri–Sat 11am–10pm · Sun 10am–8pm
     </div>
   </div>
   <a href="tel:5195550142" class="topbar-phone">
@@ -161,7 +161,7 @@
         <div class="eyebrow sr">Our Story</div>
         <h2 class="section-title sr d1" id="about-title">Where Ontario's Best<br>Flavours Come to Life</h2>
         <p class="sr d2">
-          Ember &amp; Oak Kitchen was born from a simple belief: great dining should feel like coming home. Founded by Chef Marcus Reilly and restaurateur Claire Tanaka in 2018, we set out to create a restaurant where the warmth of the room matches the warmth on the plate.
+          Ember &amp; Oak Kitchen was born from a simple belief: great dining should feel like coming home. Founded by Chef Marcus Webb and his partner and sommelier Sarah Reeves in 2018, we set out to create a restaurant where the warmth of the room matches the warmth on the plate.
         </p>
         <p class="sr d2">
           Our wood-fire kitchen is the heart of everything we do. Every protein is touched by fire, every vegetable sourced from Ontario farms within 200km of our kitchen.
@@ -223,6 +223,135 @@
   </div>
 </section>
 
+<!-- HOURS STRIP -->
+<section id="hours-strip" aria-label="Hours and location" style="background:var(--burgundy,#4A1519);padding:3rem 0;">
+  <div class="wrap">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;text-align:center;">
+      <div style="color:#fff;">
+        <div style="font-size:.75rem;text-transform:uppercase;letter-spacing:.12em;color:rgba(201,151,58,.9);margin-bottom:.5rem;">Tuesday – Thursday</div>
+        <div style="font-size:1.15rem;font-weight:600;">11am – 9pm</div>
+      </div>
+      <div style="color:#fff;">
+        <div style="font-size:.75rem;text-transform:uppercase;letter-spacing:.12em;color:rgba(201,151,58,.9);margin-bottom:.5rem;">Friday – Saturday</div>
+        <div style="font-size:1.15rem;font-weight:600;">11am – 10pm</div>
+      </div>
+      <div style="color:#fff;">
+        <div style="font-size:.75rem;text-transform:uppercase;letter-spacing:.12em;color:rgba(201,151,58,.9);margin-bottom:.5rem;">Sunday</div>
+        <div style="font-size:1.15rem;font-weight:600;">10am – 8pm</div>
+      </div>
+      <div style="color:#fff;">
+        <div style="font-size:.75rem;text-transform:uppercase;letter-spacing:.12em;color:rgba(201,151,58,.9);margin-bottom:.5rem;">Monday</div>
+        <div style="font-size:1.15rem;font-weight:600;color:rgba(255,255,255,.5);">Closed</div>
+      </div>
+      <div style="color:#fff;">
+        <div style="font-size:.75rem;text-transform:uppercase;letter-spacing:.12em;color:rgba(201,151,58,.9);margin-bottom:.5rem;">Phone</div>
+        <div style="font-size:1.15rem;font-weight:600;"><a href="tel:5195550142" style="color:#fff;text-decoration:none;">(519) 555-0142</a></div>
+      </div>
+      <div style="color:#fff;">
+        <div style="font-size:.75rem;text-transform:uppercase;letter-spacing:.12em;color:rgba(201,151,58,.9);margin-bottom:.5rem;">Location</div>
+        <div style="font-size:1rem;font-weight:500;">45 Wyndham St N, Guelph, ON</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPLORE PREVIEW CARDS -->
+<section id="explore" aria-labelledby="explore-title" style="padding:5rem 0;background:var(--cream,#F5F0E8);">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow sr">Explore</div>
+      <h2 class="section-title sr d1" id="explore-title" style="font-family:'Playfair Display',serif;">Everything Ember &amp; Oak</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-top:2.5rem;">
+      <a href="menu/" style="text-decoration:none;display:block;" class="sr d1">
+        <div style="border-radius:14px;overflow:hidden;box-shadow:0 8px 32px rgba(74,21,25,.1);transition:transform .25s,box-shadow .25s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 48px rgba(74,21,25,.18)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 32px rgba(74,21,25,.1)';">
+          <div style="height:220px;overflow:hidden;background:#4A1519;"><img src="https://images.pexels.com/photos/675951/pexels-photo-675951.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Ember-fired ribeye — from the Ember and Oak menu" loading="lazy" style="width:100%;height:100%;object-fit:cover;" onerror="imgFallback(this)" /></div>
+          <div style="background:#fff;padding:1.5rem;">
+            <div style="font-size:.7rem;text-transform:uppercase;letter-spacing:.12em;color:#C9973A;margin-bottom:.5rem;font-weight:700;">Our Menu</div>
+            <h3 style="font-family:'Playfair Display',serif;font-size:1.35rem;color:#1C0B0D;margin-bottom:.5rem;">Seasonal Dining</h3>
+            <p style="font-size:.9rem;color:#6B4B4E;margin-bottom:1rem;line-height:1.6;">Ontario-inspired wood-fired cuisine. From Ember Charcuterie to Côte de Bœuf — discover what's on now.</p>
+            <span style="font-size:.875rem;font-weight:600;color:#C9973A;">View Menu →</span>
+          </div>
+        </div>
+      </a>
+      <a href="gallery/" style="text-decoration:none;display:block;" class="sr d2">
+        <div style="border-radius:14px;overflow:hidden;box-shadow:0 8px 32px rgba(74,21,25,.1);transition:transform .25s,box-shadow .25s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 48px rgba(74,21,25,.18)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 32px rgba(74,21,25,.1)';">
+          <div style="height:220px;overflow:hidden;background:#4A1519;"><img src="https://images.pexels.com/photos/696218/pexels-photo-696218.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Ember and Oak Kitchen dining room atmosphere" loading="lazy" style="width:100%;height:100%;object-fit:cover;" onerror="imgFallback(this)" /></div>
+          <div style="background:#fff;padding:1.5rem;">
+            <div style="font-size:.7rem;text-transform:uppercase;letter-spacing:.12em;color:#C9973A;margin-bottom:.5rem;font-weight:700;">Gallery</div>
+            <h3 style="font-family:'Playfair Display',serif;font-size:1.35rem;color:#1C0B0D;margin-bottom:.5rem;">Inside Ember &amp; Oak</h3>
+            <p style="font-size:.9rem;color:#6B4B4E;margin-bottom:1rem;line-height:1.6;">The dining room, the bar, the kitchen. From plated dishes to candlelit evenings — see what awaits.</p>
+            <span style="font-size:.875rem;font-weight:600;color:#C9973A;">See Gallery →</span>
+          </div>
+        </div>
+      </a>
+      <a href="contact/" style="text-decoration:none;display:block;" class="sr d3">
+        <div style="border-radius:14px;overflow:hidden;box-shadow:0 8px 32px rgba(74,21,25,.1);transition:transform .25s,box-shadow .25s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 48px rgba(74,21,25,.18)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 32px rgba(74,21,25,.1)';">
+          <div style="height:220px;overflow:hidden;background:#4A1519;"><img src="https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Beautifully set table for an evening at Ember and Oak" loading="lazy" style="width:100%;height:100%;object-fit:cover;" onerror="imgFallback(this)" /></div>
+          <div style="background:#fff;padding:1.5rem;">
+            <div style="font-size:.7rem;text-transform:uppercase;letter-spacing:.12em;color:#C9973A;margin-bottom:.5rem;font-weight:700;">Reservations</div>
+            <h3 style="font-family:'Playfair Display',serif;font-size:1.35rem;color:#1C0B0D;margin-bottom:.5rem;">Reserve Your Table</h3>
+            <p style="font-size:.9rem;color:#6B4B4E;margin-bottom:1rem;line-height:1.6;">Book online or call us. We confirm within 2 hours. Private dining available for groups of 8 or more.</p>
+            <span style="font-size:.875rem;font-weight:600;color:#C9973A;">Make a Reservation →</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" aria-labelledby="reviews-title" style="padding:5rem 0;background:var(--cream-dk,#EDE6D8);">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow sr">Guest Reviews</div>
+      <h2 class="section-title sr d1" id="reviews-title" style="font-family:'Playfair Display',serif;">What Our Guests Say</h2>
+      <p class="section-sub sr d2">We'd love to earn your ★★★★★ too.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-top:2.5rem;">
+      <div class="sr d1" style="background:#fff;border-radius:14px;padding:2rem;box-shadow:0 4px 16px rgba(74,21,25,.08);">
+        <div style="display:flex;gap:3px;margin-bottom:1rem;">
+          <span style="color:#C9973A;font-size:1rem;">★★★★★</span>
+        </div>
+        <p style="font-size:.95rem;line-height:1.75;color:#3a2022;margin-bottom:1.25rem;">"Absolutely incredible. The côte de bœuf was the best steak I've had in years — the wood-fire char is unlike anything. The room is warm, the staff are genuine, and the wine list is exceptional. This is the best restaurant in Guelph, full stop."</p>
+        <div style="display:flex;align-items:center;gap:.75rem;">
+          <div style="width:40px;height:40px;border-radius:50%;background:#4A1519;display:flex;align-items:center;justify-content:center;color:#C9973A;font-weight:700;font-size:.9rem;">JM</div>
+          <div>
+            <div style="font-weight:600;font-size:.9rem;color:#1C0B0D;">James M.</div>
+            <div style="font-size:.8rem;color:#6B4B4E;">Google · Guelph, ON</div>
+          </div>
+        </div>
+      </div>
+      <div class="sr d2" style="background:#fff;border-radius:14px;padding:2rem;box-shadow:0 4px 16px rgba(74,21,25,.08);">
+        <div style="display:flex;gap:3px;margin-bottom:1rem;">
+          <span style="color:#C9973A;font-size:1rem;">★★★★★</span>
+        </div>
+        <p style="font-size:.95rem;line-height:1.75;color:#3a2022;margin-bottom:1.25rem;">"We celebrated our anniversary here and Chef Marcus Webb's team absolutely delivered. The mushroom risotto was silky and perfectly seasoned, and the dessert tasting was phenomenal. The private dining setup was elegant and the service was attentive without being intrusive."</p>
+        <div style="display:flex;align-items:center;gap:.75rem;">
+          <div style="width:40px;height:40px;border-radius:50%;background:#4A1519;display:flex;align-items:center;justify-content:center;color:#C9973A;font-weight:700;font-size:.9rem;">SL</div>
+          <div>
+            <div style="font-weight:600;font-size:.9rem;color:#1C0B0D;">Sophie L.</div>
+            <div style="font-size:.8rem;color:#6B4B4E;">OpenTable · Guelph, ON</div>
+          </div>
+        </div>
+      </div>
+      <div class="sr d3" style="background:#fff;border-radius:14px;padding:2rem;box-shadow:0 4px 16px rgba(74,21,25,.08);">
+        <div style="display:flex;gap:3px;margin-bottom:1rem;">
+          <span style="color:#C9973A;font-size:1rem;">★★★★★</span>
+        </div>
+        <p style="font-size:.95rem;line-height:1.75;color:#3a2022;margin-bottom:1.25rem;">"Came in on a Tuesday night and was blown away by the Ontario trout. The kitchen knows exactly how to handle local ingredients. Everything felt thoughtful — from the presentation to the sourcing notes on the menu. This place is doing Ontario cuisine right."</p>
+        <div style="display:flex;align-items:center;gap:.75rem;">
+          <div style="width:40px;height:40px;border-radius:50%;background:#4A1519;display:flex;align-items:center;justify-content:center;color:#C9973A;font-weight:700;font-size:.9rem;">RT</div>
+          <div>
+            <div style="font-weight:600;font-size:.9rem;color:#1C0B0D;">Robert T.</div>
+            <div style="font-size:.8rem;color:#6B4B4E;">Google · Cambridge, ON</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- CTA BAND -->
 <section id="cta-band" style="background:var(--accent-gold,#C9973A);padding:4rem 0;">
   <div class="wrap" style="text-align:center;">
@@ -254,9 +383,9 @@
         </a>
         <p>Upscale casual dining in the heart of Guelph, Ontario. Wood-fire kitchen, Ontario sourcing, and a room worth celebrating in.</p>
         <div class="footer-hours">
-          <div class="footer-hour"><strong>Tue–Thu</strong><span>11am – 10pm</span></div>
-          <div class="footer-hour"><strong>Fri–Sat</strong><span>11am – 11pm</span></div>
-          <div class="footer-hour"><strong>Sunday</strong><span>11am – 9pm</span></div>
+          <div class="footer-hour"><strong>Tue–Thu</strong><span>11am – 9pm</span></div>
+          <div class="footer-hour"><strong>Fri–Sat</strong><span>11am – 10pm</span></div>
+          <div class="footer-hour"><strong>Sunday</strong><span>10am – 8pm</span></div>
           <div class="footer-hour"><strong>Monday</strong><span>Closed</span></div>
         </div>
         <div class="footer-socials" aria-label="Social media links">
@@ -290,7 +419,7 @@
         <ul>
           <li><a href="tel:5195550142">(519) 555-0142</a></li>
           <li><a href="mailto:hello@emberoakkitchen.ca">hello@emberoakkitchen.ca</a></li>
-          <li><a href="#">142 Wyndham St N, Guelph</a></li>
+          <li><a href="#">45 Wyndham St N, Guelph</a></li>
           <li><a href="#">Downtown Guelph, ON</a></li>
         </ul>
       </div>
